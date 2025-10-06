@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Learning & Practice App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Code Learning & Practice</h1>
+            <p class="subtitle">Master coding concepts through interactive exercises</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Category Selection -->
+            <div class="category-section">
+                <h2>Choose Your Topic</h2>
+                <div class="category-buttons">
+                    <button class="category-btn active" data-category="javascript">JavaScript</button>
+                    <button class="category-btn" data-category="python">Python</button>
+                    <button class="category-btn" data-category="algorithms">Algorithms</button>
+                    <button class="category-btn" data-category="datastructures">Data Structures</button>
+                </div>
+            </div>
+
+            <!-- Quiz Section -->
+            <div class="quiz-section">
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <div class="question-counter">
+                    <span id="current-question">1</span> / <span id="total-questions">5</span>
+                </div>
+
+                <div class="question-card">
+                    <h3 id="question-text">What is the output of console.log(typeof [])?</h3>
+                    
+                    <div class="code-example" id="code-example">
+                        <pre><code>const arr = [];
+console.log(typeof arr);</code></pre>
+                    </div>
+
+                    <div class="options">
+                        <button class="option-btn" data-answer="0">array</button>
+                        <button class="option-btn" data-answer="1">object</button>
+                        <button class="option-btn" data-answer="2">undefined</button>
+                        <button class="option-btn" data-answer="3">string</button>
+                    </div>
+
+                    <div class="feedback" id="feedback"></div>
+                </div>
+
+                <div class="navigation-buttons">
+                    <button id="prev-btn" class="nav-btn" disabled>Previous</button>
+                    <button id="next-btn" class="nav-btn">Next Question</button>
+                </div>
+            </div>
+
+            <!-- Score Section -->
+            <div class="score-section hidden">
+                <h2>🎉 Quiz Complete!</h2>
+                <div class="score-display">
+                    <div class="score-circle">
+                        <span id="score-text">0</span>
+                        <span class="score-label">/ 5</span>
+                    </div>
+                    <p class="score-message" id="score-message">Great job!</p>
+                </div>
+                <button id="restart-btn" class="restart-btn">Try Again</button>
+            </div>
+
+            <!-- Practice Code Editor -->
+            <div class="editor-section">
+                <h2>💻 Practice Code Editor</h2>
+                <div class="editor-container">
+                    <textarea id="code-editor" placeholder="Write your code here...">// Try writing some JavaScript
+function greet(name) {
+    return 'Hello, ' + name + '!';
+}
+
+console.log(greet('World'));</textarea>
+                    <button id="run-code" class="run-btn">▶ Run Code</button>
+                </div>
+                <div class="output-container">
+                    <h3>Output:</h3>
+                    <pre id="output"></pre>
+                </div>
+            </div>
+
+            <!-- Resources Section -->
+            <div class="resources-section">
+                <h2>📚 Learning Resources</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <h3>JavaScript Basics</h3>
+                        <p>Learn variables, functions, and control structures</p>
+                        <ul>
+                            <li>Variables and Data Types</li>
+                            <li>Functions and Scope</li>
+                            <li>Arrays and Objects</li>
+                        </ul>
+                    </div>
+                    <div class="resource-card">
+                        <h3>Python Fundamentals</h3>
+                        <p>Master Python syntax and core concepts</p>
+                        <ul>
+                            <li>Python Syntax</li>
+                            <li>Lists and Dictionaries</li>
+                            <li>Object-Oriented Programming</li>
+                        </ul>
+                    </div>
+                    <div class="resource-card">
+                        <h3>Algorithms</h3>
+                        <p>Understand sorting, searching, and optimization</p>
+                        <ul>
+                            <li>Sorting Algorithms</li>
+                            <li>Search Algorithms</li>
+                            <li>Time Complexity</li>
+                        </ul>
+                    </div>
+                    <div class="resource-card">
+                        <h3>Data Structures</h3>
+                        <p>Learn stacks, queues, trees, and graphs</p>
+                        <ul>
+                            <li>Arrays and Linked Lists</li>
+                            <li>Stacks and Queues</li>
+                            <li>Trees and Graphs</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Built for learning and practice 💡 | Keep coding, keep growing! 🌱</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
